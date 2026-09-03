@@ -1,3 +1,33 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Chapter 1 - 第一个 ReAct Agent
+"""
+
+# 所有导入放在文件开头
+import os
+import re
+import sys
+import requests
+from dotenv import load_dotenv
+from openai import OpenAI
+from tavily import TavilyClient
+
+# 设置标准输出编码为 UTF-8，解决 Windows 控制台中文显示问题
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except AttributeError:
+        import io
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+# 加载 .env 文件
+load_dotenv()
+
+# ============================================================================
+# Agent 系统提示词
+# ============================================================================
+
 AGENT_SYSTEM_PROMPT = """
 你是一个智能旅行助手。你的任务是分析用户的请求，并使用可用工具一步步地解决问题。
 
@@ -23,8 +53,9 @@ Action的格式必须是以下之一：
 请开始吧！
 """
 
-
-import requests
+# ============================================================================
+# 工具函数定义
+# ============================================================================
 
 def get_weather(city: str) -> str:
     """
@@ -55,11 +86,6 @@ def get_weather(city: str) -> str:
     except (KeyError, IndexError) as e:
         # 处理数据解析错误
         return f"错误：解析天气数据失败，可能是城市名称无效 - {e}"
-
-
-
-import os
-from tavily import TavilyClient
 
 def get_attraction(city: str, weather: str) -> str:
     """
@@ -108,7 +134,9 @@ available_tools = {
     "get_attraction": get_attraction,
 }
 
-from openai import OpenAI
+# ============================================================================
+# LLM 客户端
+# ============================================================================
 
 class OpenAICompatibleClient:
     """
@@ -138,14 +166,29 @@ class OpenAICompatibleClient:
             print(f"调用LLM API时发生错误: {e}")
             return "错误：调用语言模型服务时出错。"
 
-import re
+# ============================================================================
+# 主程序
+# ============================================================================
 
 # --- 1. 配置LLM客户端 ---
-# 请根据您使用的服务，将这里替换成对应的凭证和地址
-API_KEY = "YOUR_API_KEY"
-BASE_URL = "YOUR_BASE_URL"
-MODEL_ID = "YOUR_MODEL_ID"
-os.environ['TAVILY_API_KEY'] = "YOUR_TAVILY_API_KEY"
+# 从环境变量读取配置
+API_KEY = os.getenv("API_KEY")
+BASE_URL = os.getenv("BASE_URL")
+MODEL_ID = os.getenv("MODEL_ID")
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+
+# 检查必需的配置
+if not API_KEY or API_KEY == "YOUR_API_KEY" or API_KEY.startswith("sk-xxxx"):
+    print("[ERROR] 错误：请先配置 .env 文件中的 API_KEY")
+    print("[INFO] 编辑文件：d:\\code\\agent\\hello-agents\\code\\chapter1\\.env")
+    print("[INFO] 查看指南：ACTION_NEEDED.md")
+    exit(1)
+
+if TAVILY_API_KEY and TAVILY_API_KEY != "your_tavily_key_here":
+    os.environ['TAVILY_API_KEY'] = TAVILY_API_KEY
+else:
+    print("[WARNING] 提示：未配置 TAVILY_API_KEY，景点推荐功能将无法使用")
+    print("[INFO] 可以先测试天气查询功能\n")
 
 llm = OpenAICompatibleClient(
     model=MODEL_ID,
