@@ -130,7 +130,7 @@
 - 视频课程陆续放出（将会更加细致，实践课带领大家从设计思路到实施，授人以鱼也授人以渔）
 - HelloAgents框架已经更新V1.0.0版本，将会继续完善，增加更多好用，轻量化的工具和特性，兼容学习版本。
 - 2026年5月更新智能体最新学习路线, [点击](https://github.com/datawhalechina/Agent-Learning-Hub) 查询
-- 感谢大家助力6W Star! 现在提供调查问卷，供大家填写自己需要学习的智能体内容。后续作品《从零开始训练智能体》，帮助每一个学习者掌握从零到一训练自定义场景智能体模型的能力。
+- 感谢大家助力7W Star! 现在提供调查问卷，供大家填写自己需要学习的智能体内容。后续作品《从零开始训练智能体》，帮助每一个学习者掌握从零到一训练自定义场景智能体模型的能力。
 <div align='center'>
     <img src="./读者反馈问卷.png" alt="读者反馈问卷" width="30%">
     <p>扫描二维码填写反馈意见，助力新项目共同成长</p>
@@ -166,6 +166,18 @@
 - [Pranav Janakiraman-个人开发者](https://github.com/pranavjana) (TinyFish, Extra11 内容贡献)
 - [王雨飞-个人开发者](https://github.com/nameless0120) (北京邮电大学，Extra12 内容贡献)
 
+### 视频课程贡献者
+
+- 范丽（第四章 ReAct、Plan-and-Solve 与 Reflection 视频讲解）
+- 西芹百合（第五章 Coze 视频讲解）
+- 长庚（第五章第二节 Coze 跟练实战）
+- 高鸿飞（第六章第五节 LangGraph 跟练实战）
+- [柠檬酸（不吃柠檬🍋）](https://github.com/HnuLemons)（第八章第一、二节视频讲解与配套课件）
+- [楚客（秦川楚客）](https://www.xiaohongshu.com/user/profile/643f4844000000002a009e81)（第九章上下文工程讲解与实战）
+- 潘钲日（第十四章自动化深度研究智能体讲解与实战）
+
+视频链接和配套材料见 [Hello-Agents 视频课录制共创](https://github.com/datawhalechina/hello-agents/blob/main/Extra-Chapter/Extra13-Hello-Agents视频课录制共创.md)。
+
 ### 特别感谢
 - 感谢 [@Sm1les](https://github.com/Sm1les) 对本项目的帮助与支持
 - 感谢所有为本项目做出贡献的开发者们 ❤️
@@ -179,7 +191,7 @@
 ## Star History
 
 <div align='center'>
-    <img src="./docs/images/star-history-2026618.png" alt="Datawhale" width="90%">
+    <img src="./docs/images/0920-hello-agents-stats.png" alt="Datawhale" width="90%">
 </div>
 
 <div align="center">
@@ -207,7 +219,7 @@
 ```bibtex
 @misc{hello_agents2025,
   title  = {Hello-Agents: Building an AI Agent from Scratch},
-  author = {Sizhou Chen and Tao Sun and Shufan Jiang and Peilin Huang and Xinmin Zeng and Xinzhong Zhu and all Hello-Agents contributors},
+  author = {Sizhou Chen and Tao Sun and Shufan Jiang and Peilin Huang and Xinmin Zeng and Hao Hu and Xinzhong Zhu and all Hello-Agents contributors},
   year   = {2025},
   url    = {https://github.com/datawhalechina/Hello-Agents},
   note   = {GitHub repository}

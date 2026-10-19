@@ -147,6 +147,18 @@ We are an open-source community and welcome any form of contribution!
 - [Pranav Janakiraman - Individual Developer](https://github.com/pranavjana) (TinyFish, Extra11 content contribution)
 - [Wang Yufei - Individual Developer](https://github.com/nameless0120) (Beijing University of Posts and Telecommunications, Extra12 content contribution)
 
+### Video Course Contributors
+
+- 范丽 (Fan Li) (Chapter 4 videos on ReAct, Plan-and-Solve, and Reflection)
+- 西芹百合 (Xiqin Baihe) (Chapter 5 Coze video)
+- 长庚 (Changgeng) (Section 5.2 Coze hands-on walkthrough)
+- 高鸿飞 (Gao Hongfei) (Section 6.5 LangGraph hands-on walkthrough)
+- [柠檬酸（不吃柠檬🍋）](https://github.com/HnuLemons) (Videos and supporting course materials for Sections 8.1 and 8.2)
+- [楚客（秦川楚客）](https://www.xiaohongshu.com/user/profile/643f4844000000002a009e81) (Chapter 9 context engineering explanation and practice)
+- 潘钲日 (Pan Zhengri) (Chapter 14 automated deep research agent explanation and practice)
+
+Video links and supporting materials are available in [Hello-Agents Video Course Co-creation](https://github.com/datawhalechina/hello-agents/blob/main/Extra-Chapter/Extra13-Hello-Agents视频课录制共创.md).
+
 ### Special Thanks
 - Thanks to [@Sm1les](https://github.com/Sm1les) for help and support for this project
 - Thanks to all developers who have contributed to this project ❤️
@@ -160,7 +172,7 @@ We are an open-source community and welcome any form of contribution!
 ## Star History
 
 <div align='center'>
-    <img src="./images/star-history-2026618.png" alt="Datawhale" width="90%">
+    <img src="./images/0920-hello-agents-stats.png" alt="Datawhale" width="90%">
 </div>
 
 <div align="center">
@@ -188,7 +200,7 @@ If Hello-Agents is helpful to your research or work, please cite:
 ```bibtex
 @misc{hello_agents2025,
   title  = {Hello-Agents: Building an AI Agent from Scratch},
-  author = {Sizhou Chen and Tao Sun and Shufan Jiang and Peilin Huang and Xinmin Zeng and Xinzhong Zhu and all Hello-Agents contributors},
+  author = {Sizhou Chen and Tao Sun and Shufan Jiang and Peilin Huang and Xinmin Zeng and Hao Hu and Xinzhong Zhu and all Hello-Agents contributors},
   year   = {2025},
   url    = {https://github.com/datawhalechina/Hello-Agents},
   note   = {GitHub repository}
